@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.navbar ul li a {
+  color: #E9DCC9;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-right .navbar-button {
+  margin-right: 20px; /* Add margin between Register and Sign In buttons */
+}
+
+.navbar ul li a:hover {
+  background-color: #555;
+}
+
+.navbar-button {
+  color: #F9F6EE;
+  background-color: #51829B; /* Example color for Register button */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 29px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 540;
+}
+
+.navbar-button:last-child {
+  background-color: #41B06E; /* Example color for Sign In button */
+}
+
+.navbar-button:hover {
+  background-color: #6C0345; /* Darker shade on hover */
+}

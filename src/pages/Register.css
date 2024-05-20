@@ -1,0 +1,104 @@
+.register-container {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .left-section {
+    width: 65%; /* Two thirds of the page */
+    padding: 20px;
+    height: 10vh;
+  }
+  
+  .right-section {
+    width: 30%; /* One third of the page */
+    padding: 20px;
+  }
+  
+  .registration-form {
+    /* Styling for the registration form */
+    padding: 20px;
+    
+  }
+  
+  /* Add more styles as needed */
+  
+
+  .registration-form label {
+    display: block;
+    margin-bottom: 10px; /* Add some spacing between input fields */
+  }
+  
+  .registration-form input {
+    width: calc(100% - 16px); /* Make input fields fill the entire width, considering padding */
+    padding: 8px; /* Add padding for better appearance */
+    margin-bottom: 15px; /* Add some spacing between input fields */
+    box-sizing: border-box; /* Include padding and border in the width */
+  }
+  
+  .registration-form button {
+    /* Add styling for the register button if needed */
+  }
+
+  .right-section {
+    width: 30%; /* One third of the page */
+    padding: 20px;
+    margin-top: 220px;
+    
+   
+  }
+  
+  .left-section {
+    width: 65%; /* Two thirds of the page */
+    padding: 20px;
+  }
+  
+  .graphic-image-container {
+    flex: 1; /* Allow the container to grow and fill available space */
+    position: relative; /* Position the container relatively for absolute positioning */
+  }
+  
+  .graphic-image {
+    position:relative; /* Position the image absolutely within the container */
+    width: 100%; /* Ensure the image spans the entire width of its container */
+    height: 100%; /* Ensure the image fills the entire height of its container */
+    object-fit: cover; /* Ensure the image covers the entire container */
+  }
+  /*  border-left: 2px solid #080808; /* Add a border on the left side*/
+
+.left-bottom-section {
+    background-color: grey;
+    border-radius: 95px;
+}
+
+
+.slogan{
+
+    font: 100;
+    font-family: 'Times New Roman', serif;
+    margin-left: 50px;
+    font-size: 60px;
+}
+
+.slogan-2{
+margin-left: 17px;
+
+}
+.registration-form label {
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+  }
+  
+  .registration-form input {
+    font-family: "Gill Sans", sans-serif;
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+  
+  .registration-form button {
+    font-family: "Gill Sans", sans-serif;
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+  
+ 
