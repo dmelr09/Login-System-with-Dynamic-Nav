@@ -2,10 +2,11 @@
 import React from "react";
 import "./Home.css"; // Import the CSS file
 
-function Home({ username }) {
+function Home({ name }) {
+  console.log("This is the name:", name);
   return (
     <div>
-      {username ? <h2>Welcome, {username}!</h2> : <h1>This is home.</h1>}
+      {name ? <h2>Welcome, {name}!</h2> : <h1>This is home.</h1>}
 
       <p>
         This page will display information regarding organic foods and

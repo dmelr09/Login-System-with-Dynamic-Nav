@@ -15,17 +15,18 @@ import SignOut from "./pages/SignOut";
 function App() {
   // State to manage user authentication
   const [username, setUsername] = useState(null);
+  const [name, setName] = useState(null);
 
   // Function to handle user login
-  const handleLogin = (username) => {
-    // Logic to authenticate the user
-    setUsername(username);
+  const handleLogin = ({ email, name }) => {
+    setUsername(email); // Set the username state to the user's email
+    setName(name); // Set the name state to the user's name
   };
-
   // Function to handle user logout
   const handleLogout = () => {
     // Logic to logout the user
     setUsername(null);
+    setName(null);
     alert("You have been signed out!");
   };
 
@@ -36,7 +37,7 @@ function App() {
         {/* Pass username and handleLogout as props to NavBar */}
         <NavBar username={username} handleLogout={handleLogout} />
         <Routes>
-          <Route path="/" element={<Home username={username} />} />
+          <Route path="/" element={<Home name={name} username={username} />} />
           <Route path="/SpecialDeals" element={<SpecialDeals />} />
           <Route
             path="/Register"
@@ -58,23 +59,3 @@ function App() {
 }
 
 export default App;
-
-/* <div className="d-flex flex-column min-vh-100">
-      <Router>
-        <Navbar username={username} logoutUser={logoutUser} />
-        <main role="main">
-          <div className="container my-3">
-            <Routes>
-              <Route path="/" element={<Home username={username} />} />
-              <Route path="/login" element={<Login loginUser={loginUser} />} />
-              <Route
-                path="/profile"
-                element={<MyProfile username={username} />}
-              />
-              <Route path="/forum" element={<Forum username={username} />} />
-            </Routes>
-          </div>
-        </main>
-        <Footer />
-      </Router>
-    </div>*/

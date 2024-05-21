@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import graphicSVG from "../images/graphicSVG.svg";
 import "./Register.css";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 
 // 2. Create a registration page for new users.
 // - Define state variables for user inputs
@@ -13,6 +14,8 @@ function Register({ handleLogin }) {
   const [email, setEmail] = useState(""); // Store user's email
   const [password, setPassword] = useState(""); // Store user's password
 
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
   // Handle user sign-up process.
   const handleSignUp = (e) => {
     e.preventDefault(); // Prevent default form submission behavior
@@ -20,6 +23,8 @@ function Register({ handleLogin }) {
     localStorage.setItem("user", JSON.stringify({ name, email, password }));
     // Provide feedback to the user upon successful account creation.
     alert("Account created successfully!");
+
+    navigate("/");
   };
 
   // Render sign-up form.
