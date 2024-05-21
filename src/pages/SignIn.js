@@ -13,8 +13,8 @@ function SignIn({ handleLogin }) {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user && user.email === email && user.password === password) {
       alert("Login successful!");
-      console.log("email is: " + user.email); // Access user's email property
-      console.log("name is: " + user.name);
+      console.log("email is: " + user.email); // Debugging statement
+      console.log("name is: " + user.name); // Debugging statement
       handleLogin({ email: user.email, name: user.name }); // Call handleLogin with the logged-in user's email
       navigate("/"); // Redirect to home page after successful login
     } else {
