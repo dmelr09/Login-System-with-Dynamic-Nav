@@ -36,7 +36,7 @@ function App() {
         {/* Pass username and handleLogout as props to NavBar */}
         <NavBar username={username} handleLogout={handleLogout} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home username={username} />} />
           <Route path="/SpecialDeals" element={<SpecialDeals />} />
           <Route
             path="/Register"
