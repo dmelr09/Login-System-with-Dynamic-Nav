@@ -26,6 +26,7 @@ function App() {
   const handleLogout = () => {
     // Logic to logout the user
     setUsername(null);
+    alert("You have been signed out!");
   };
 
   return (

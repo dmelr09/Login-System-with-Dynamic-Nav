@@ -7,42 +7,38 @@ function NavBar({ username, handleLogout }) {
 
   return (
     <nav className="navbar">
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/SpecialDeals">Special Deals</Link>
-        </li>
-        {/* Check if username exists */}
-        {username && (
+      <div className="navbar-left">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/SpecialDeals">Special Deals</Link>
+          </li>
+        </ul>
+      </div>
+
+      <div className="navbar-right">
+        {username ? (
           <>
-            {/* Display "My Profile" and "Sign Out" buttons */}
             <Link to="/profile" className="navbar-button">
               My Profile
             </Link>
-            <Link
-              to="/signout"
-              onClick={handleLogout}
-              className="navbar-button"
-            >
+            <Link to="/" onClick={handleLogout} className="navbar-button">
               Sign Out
             </Link>
           </>
+        ) : (
+          <>
+            <Link to="/register" className="navbar-button">
+              Register
+            </Link>
+            <Link to="/signin" className="navbar-button">
+              Sign In
+            </Link>
+          </>
         )}
-      </ul>
-
-      {/* Conditional rendering for right-aligned buttons */}
-      {!username && (
-        <div className="navbar-right">
-          <Link to="/register" className="navbar-button">
-            Register
-          </Link>
-          <Link to="/signin" className="navbar-button">
-            Sign In
-          </Link>
-        </div>
-      )}
+      </div>
     </nav>
   );
 }
